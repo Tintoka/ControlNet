@@ -41,3 +41,10 @@ class MLSDdetector:
         except Exception as e:
             pass
         return img_output[:, :, 0]
+detector_mlsd = None
+
+def apply_mlsd(input_image, thr_v=0.1, thr_d=0.1):
+    global detector_mlsd
+    if detector_mlsd is None:
+        detector_mlsd = MLSDdetector()
+    return detector_mlsd(input_image, thr_v, thr_d)

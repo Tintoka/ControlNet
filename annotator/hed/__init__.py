@@ -94,3 +94,9 @@ def nms(x, t, s):
     z = np.zeros_like(y, dtype=np.uint8)
     z[y > t] = 255
     return z
+
+def apply_hed(input_image):
+    # This wrapper function makes the HEDdetector class compatible with your model.py
+    # It instantiates the detector and processes the image
+    detector = HEDdetector()
+    return detector(input_image)
