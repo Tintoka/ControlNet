@@ -73,7 +73,7 @@ with block:
         gr.Markdown("## Control Stable Diffusion with Hough Line Maps")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             prompt = gr.Textbox(label="Prompt")
             run_button = gr.Button(label="Run")
             with gr.Accordion("Advanced options", open=False):
