@@ -87,7 +87,7 @@ with block:
         gr.Markdown("## Canny Edge")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             low_threshold = gr.Slider(label="low_threshold", minimum=1, maximum=255, value=100, step=1)
             high_threshold = gr.Slider(label="high_threshold", minimum=1, maximum=255, value=200, step=1)
             resolution = gr.Slider(label="resolution", minimum=256, maximum=1024, value=512, step=64)
@@ -100,7 +100,7 @@ with block:
         gr.Markdown("## HED Edge")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             resolution = gr.Slider(label="resolution", minimum=256, maximum=1024, value=512, step=64)
             run_button = gr.Button(label="Run")
         with gr.Column():
@@ -111,7 +111,7 @@ with block:
         gr.Markdown("## MLSD Edge")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             value_threshold = gr.Slider(label="value_threshold", minimum=0.01, maximum=2.0, value=0.1, step=0.01)
             distance_threshold = gr.Slider(label="distance_threshold", minimum=0.01, maximum=20.0, value=0.1, step=0.01)
             resolution = gr.Slider(label="resolution", minimum=256, maximum=1024, value=384, step=64)
@@ -124,7 +124,7 @@ with block:
         gr.Markdown("## MIDAS Depth and Normal")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             alpha = gr.Slider(label="alpha", minimum=0.1, maximum=20.0, value=6.2, step=0.01)
             resolution = gr.Slider(label="resolution", minimum=256, maximum=1024, value=384, step=64)
             run_button = gr.Button(label="Run")
@@ -136,7 +136,7 @@ with block:
         gr.Markdown("## Openpose")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             hand = gr.Checkbox(label='detect hand', value=False)
             resolution = gr.Slider(label="resolution", minimum=256, maximum=1024, value=512, step=64)
             run_button = gr.Button(label="Run")
@@ -149,7 +149,7 @@ with block:
         gr.Markdown("## Uniformer Segmentation")
     with gr.Row():
         with gr.Column():
-            input_image = gr.Image(source='upload', type="numpy")
+            input_image = gr.Image( type="numpy")
             resolution = gr.Slider(label="resolution", minimum=256, maximum=1024, value=512, step=64)
             run_button = gr.Button(label="Run")
         with gr.Column():
