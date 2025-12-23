@@ -47,11 +47,3 @@ class OpenposeDetector:
                     all_hand_peaks.append(peaks)
                 canvas = util.draw_handpose(canvas, all_hand_peaks)
             return canvas, dict(candidate=candidate.tolist(), subset=subset.tolist())
-
-detector_openpose = None
-
-def apply_openpose(input_image, hand_and_face=False):
-    global detector_openpose
-    if detector_openpose is None:
-        detector_openpose = OpenposeDetector()
-    return detector_openpose(input_image, hand_and_face)
