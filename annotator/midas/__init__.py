@@ -40,3 +40,12 @@ class MidasDetector:
             normal_image = (normal * 127.5 + 127.5).clip(0, 255).astype(np.uint8)
 
             return depth_image, normal_image
+
+
+detector_midas = None
+
+def apply_midas(input_image, a=0.1, bg_th=0.1):
+    global detector_midas
+    if detector_midas is None:
+        detector_midas = MidasDetector()
+    return detector_midas(input_image, a, bg_th)

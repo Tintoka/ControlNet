@@ -25,3 +25,11 @@ class UniformerDetector:
         result = inference_segmentor(self.model, img)
         res_img = show_result_pyplot(self.model, img, result, get_palette('ade'), opacity=1)
         return res_img
+
+detector_uniformer = None
+
+def apply_uniformer(input_image):
+    global detector_uniformer
+    if detector_uniformer is None:
+        detector_uniformer = UniformerDetector()
+    return detector_uniformer(input_image)
